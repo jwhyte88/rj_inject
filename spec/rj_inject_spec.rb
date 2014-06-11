@@ -6,16 +6,26 @@ describe 'inject' do
 	context 'excisting inject method should' do
 
 		it 'explicit memo and block with addition' do
-			result = array.inject(0){|memo,element| memo + element}
+			result = array.inject(0){|memo, element| memo + element}
 			expect(result).to eq 10
+		end
+
+		it 'explicit different memo and block with addition' do
+			result = array.inject(1){|memo, element| memo + element}
+			expect(result).to eq 11
 		end
 	end
 
 	context 'custom inject method should' do
 
 		it 'explicit memo and block with addition' do
-			result = array.rj_inject(0){|memo,element| memo + element}
+			result = array.rj_inject(0){|memo, element| memo + element}
 			expect(result).to eq 10
+		end
+
+		it 'explicit different memo and block with addition' do
+			result = array.rj_inject(1){|memo, element| memo + element}
+			expect(result).to eq 11
 		end
 	end
 end

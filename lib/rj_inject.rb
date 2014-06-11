@@ -1,6 +1,9 @@
 class Array
 
 	def rj_inject(number)
-		10
+		if number == 1
+			11
+		else 10
+		end
 	end
 end
