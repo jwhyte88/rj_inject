@@ -1,13 +1,21 @@
-require 'rj_inject' 
+require 'rj_inject'
 
 describe 'inject' do
-  let(:array){[1,2,3,4]}
+	let(:array){[1,2,3,4]}
 
-  context 'existing inject method should' do
+	context 'excisting inject method should' do
 
-    it 'explicit memo and block with addition' do
-      result = array.inject(0) { |memo, n| memo + n }
-      expect(result).to eq 10
-    end
- end
+		it 'explicit memo and block with addition' do
+			result = array.inject(0){|memo,element| memo + element}
+			expect(result).to eq 10
+		end
+	end
+
+	context 'custom inject method should' do
+
+		it 'explicit memo and block with addition' do
+			result = array.rj_inject(0){|memo,element| memo + element}
+			expect(result).to eq 10
+		end
+	end
 end
