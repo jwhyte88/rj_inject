@@ -19,6 +19,11 @@ describe 'inject' do
 			result = array.inject {|memo, element| memo + element + element}
 			expect(result).to eq 19
 		end
+
+		it 'explicit memo and block with multiplication' do
+			result = array.inject(1){|memo, element| memo * element}
+			expect(result).to eq 24
+		end
 	end
 
 	context 'custom inject method should' do
@@ -36,6 +41,11 @@ describe 'inject' do
 		it 'empty argument and block with longer addition' do
 			result = array.rj_inject {|memo, element| memo + element + element}
 			expect(result).to eq 19
+		end
+
+		it 'explicit memo and block with multiplication' do
+			result = array.rj_inject(1){|memo, element| memo * element}
+			expect(result).to eq 24
 		end
 	end
 end
