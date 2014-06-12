@@ -1,5 +1,5 @@
 # rj_inject
 
-This repository is for one of the challenges set by Makers Academy. The repo will be updated shortly.
+This repo includes a custom rewrite of Ruby's inject method, with tests written with RSpec to make sure it matchs the original.
 
-[*Basically...*](https://raw.githubusercontent.com/jwhyte88/LearnRubyTheHardWay/master/Images/NothingToSeeHere.jpg) yet!
+Thanks to [Roi Driscoll](https://github.com/roidriscoll) for his help with the RSpec testing.
